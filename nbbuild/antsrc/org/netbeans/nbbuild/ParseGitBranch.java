@@ -18,6 +18,8 @@
  */
 package org.netbeans.nbbuild;
 
+import java.util.*;
+
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Task;
 import java.io.Reader;
@@ -53,22 +55,27 @@ public class ParseGitBranch extends Task {
     public void execute() throws BuildException {
         super.execute();
         Reader dataReader = new StringReader(data);
-        String firstLine = null;
-        String secondLine = null;
+        List<String> pools = new ArrayList<String>();
+        List<String> target = new ArrayList<String>();
         try (LineNumberReader r = new LineNumberReader(dataReader);) {
-            firstLine = r.readLine();
-            secondLine = r.readLine();
+            pools.add(r.readLine());
+            pools.add(r.readLine());
         } catch (IOException ex) {
             throw new BuildException("Problem reading information for detached head");
         }
-        if (secondLine != null) {
+        for (String pool : pools) {
+            if (pool!=null && !pool.contains("->")) {
+                target.add(pool);
+            }
+        }
+        if (target.size() > 1) {
             throw new BuildException("Problem parsing git information for detached head : too many line");
         }
-        if (firstLine == null || firstLine.trim().isEmpty()) {
+        if (target.isEmpty() || (target.size()==1 && target.get(0).trim().isEmpty())) {
             // PullRequest assume master ?
             getProject().setProperty(propertyName, "master");
         } else {
-            String[] splited = firstLine.trim().split(" ");
+            String[] splited = target.get(0).trim().split(" ");
             long count = splited[0].chars().filter(ch -> ch == '/').count();
             if (count != 1) {
                 throw new BuildException("Problem parsing git information" + count);
