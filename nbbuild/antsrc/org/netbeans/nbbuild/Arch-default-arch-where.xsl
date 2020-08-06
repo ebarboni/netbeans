@@ -27,7 +27,7 @@
     <xsl:template match="/" >
         <p>
             The sources for the module are in the
-            <a href="http://hg.netbeans.org/">NetBeans Mercurial repositories</a>.
+            <a href="http://github.com/apache/netbeans/">Apache NetBeans Git repositories</a>.
         </p>
     </xsl:template>    
         </xsl:stylesheet> 

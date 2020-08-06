@@ -31,7 +31,7 @@
     <filter pattern="http://bits\.netbeans\.org/" accept="true"/>
     <!-- sources -->
     <filter pattern="http://www\.netbeans\.org/(unbranded-)?source/browse/.*" accept="true"/>
-    <filter pattern="http://hg\.netbeans\.org.*" accept="true"/>
+    <filter pattern="http://hg\.netbeans\.org.*" accept="false"/>
     <filter pattern="http://openide\.netbeans\.org/versioning-policy\.html.*" accept="true"/>
     <filter pattern="http://www\.netbeans\.org/issues/show_bug\.cgi.*" accept="true"/>
     <filter pattern="http://openide\.netbeans\.org.*tutorial.*api-design.*" accept="true"/>
