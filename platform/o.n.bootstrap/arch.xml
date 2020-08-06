@@ -1427,7 +1427,7 @@
             Together, working in orchestration, they eliminate the need to
             touch the disk (which is very slow operation especially during
             <a href="http://wiki.apidesign.org/wiki/Startup#Morning_Launch">morning launch</a>).
-            Btw. there is a <a href="https://github.com/apache/netbeans/blob/master/platform/core.startup/test/unit/src/org/netbeans/core/startup/layers/CachingPreventsFileTouchesTest.java">
+            Btw. there is a <a href="@GITAPACHE@/master/platform/core.startup/test/unit/src/org/netbeans/core/startup/layers/CachingPreventsFileTouchesTest.java">
             test which verifies</a> 
             the caching system really works
             -- it is recommended for each product built on top of NetBeans Platform

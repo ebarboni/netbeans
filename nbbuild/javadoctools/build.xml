@@ -226,6 +226,8 @@
         <replace dir="${netbeans.javadoc.dir}">
             <include name="*.html"/>
             <replacefilter token="@JDK@" value="${javaapidocurl}"/>
+            <replacefilter token="@GITAPACHE@" value="https://github.com/apache/netbeans/tree/"/>
+            
             &replaces;   
             <replacefilter token="http://root/" value="."/>
             <replacefilter token="$${javadoc.web.root}" value="."/>
