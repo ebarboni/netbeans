@@ -354,7 +354,7 @@
             <td> <!-- stability category -->
                 <a>
                     <xsl:attribute name="href">
-                        <xsl:text>http://wiki.netbeans.org/API_Stability#</xsl:text>
+                        <xsl:text>https://netbeans.apache.org/wiki/API_Stability#</xsl:text>
                         <xsl:choose>
                             <xsl:when test="$category='official'">Official</xsl:when>
                             <xsl:when test="$category='stable'">Stable</xsl:when>

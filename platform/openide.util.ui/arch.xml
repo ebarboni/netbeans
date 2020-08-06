@@ -43,7 +43,7 @@
  <answer id="arch-quality">
   <p>
    There is a lot of unit tests in 
-   <a href="http://hg.netbeans.org/main-golden/openide.util/test/unit/src/">version control</a>
+   <a href="@GITURL@/master/openide.util/test/unit/src/">version control</a>
    system.
   </p>
  </answer>
@@ -126,7 +126,7 @@
   </p>
 
   <p>Support for SVG image loading can be enabled by including the optional
-     <a href="@org-openide-util-ui-svg@/overview-summary.html">SVG Loader</a> module.
+     <!-- Not apidoc yet<a href="@org-openide-util-ui-svg@/overview-summary.html">-->SVG Loader<!--</a>--> module.
   </p>
  </answer>
 

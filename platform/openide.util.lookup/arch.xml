@@ -49,7 +49,7 @@
  <answer id="arch-quality">
   <p>
    There is a lot of unit tests in 
-   <a href="http://hg.netbeans.org/main-golden/openide.util.lookup/test/unit/src/">version control</a>
+   <a href="@GITURL@/master/platform/openide.util.lookup/test/unit/src/">version control</a>
    system.
   </p>
  </answer>

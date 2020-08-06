@@ -87,6 +87,7 @@ cause it to fail.
         <!-- Docs to link to: -->
         <property name="javadoc.web.root" value="http://root/"/>
         <property name="javadoc.docs.jdk" value="http://download.oracle.com/javase/8/docs/api"/>
+        <property name="netbeans.git.url" value="https://github.com/apache/netbeans/tree/" />
         &properties;
         <!-- add more here as needed... -->
         <property name="javadoc.css.dir" location="."/>
@@ -404,6 +405,7 @@ cause it to fail.
         <replace dir="${export.apichanges}" >        
             <include name="${javadoc.name}"/>
             <replacefilter token="@JDK@" value="${javadoc.docs.jdk}"/>
+            <replacefilter token="@GITURL@" value="${netbeans.git.url}"/>
             <replacefilter token="@FOOTER@" value="${javadoc.footer}"/>
             <replacefilter token="@TOP@/" value="@TOP@" />
             <replacefilter token="@TOP@" value="${javadoc.name}/" />
@@ -414,6 +416,7 @@ cause it to fail.
         <replace dir="${export.interfaces}" >
             <include name="${javadoc.name}"/>
             <replacefilter token="@JDK@" value="${javadoc.docs.jdk}"/>
+            <replacefilter token="@GITURL@" value="${netbeans.git.url}"/>
             <replacefilter token="@FOOTER@" value="${javadoc.footer}"/>
             <replacefilter token="@TOP@/" value="@TOP@" />
             <replacefilter token="@TOP@" value="${javadoc.name}/" />
@@ -425,6 +428,7 @@ cause it to fail.
         <replace dir="${javadoc.out.dir}">
             <include name="**/*.html"/>
             <replacefilter token="@JDK@" value="${javadoc.docs.jdk}"/>
+            <replacefilter token="@GITURL@" value="${netbeans.git.url}"/>
             &replaces;
             <replacefilter token="@FOOTER@" value="${javadoc.footer}"/>
         </replace>
@@ -473,9 +477,13 @@ cause it to fail.
         <replace dir="${javadoc.out.dir}" token="@TOP@" value="../../../../../../../../">
             <include name="*/*/*/*/*/*/*/*/*.html"/>
         </replace>
+        <replace dir="${javadoc.out.dir}" token="@TOP@" value="../../../../../../../../../">
+            <include name="*/*/*/*/*/*/*/*/*/*.html"/>
+        </replace>
     </target>
     
-    <target name="javadoc-stage-check" depends="javadoc-stage-replace" unless="javadoc.up.to.date">
+    <target name="javadoc-stage-check" depends="javadoc-stage-replace">
+        <!-- unless="javadoc.up.to.date" -->
         <taskdef name="checklinks" classname="org.netbeans.nbbuild.CheckLinks">
             <classpath>
                 <pathelement location="${nbantext.jar}"/>
