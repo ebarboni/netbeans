@@ -129,7 +129,7 @@ public class CheckLinks extends MatchingTask {
             }
             testMessage = b.toString();
         }
-        JUnitReportWriter.writeReport(this, null, report, Collections.singletonMap("testBrokenLinks", testMessage));
+        JUnitReportWriter.writeReport(this, basedir, report, Collections.singletonMap("testBrokenLinks", testMessage));
     }
     
     private static Pattern hrefOrAnchor = Pattern.compile("<(a|img|link)(\\s+shape=\"rect\")?(?:\\s+rel=\"stylesheet\")?\\s+(href|name|src|id)=\"([^\"#]*)(#[^\"]+)?\"(\\s+shape=\"rect\")?(?:\\s+type=\"text/css\")?\\s*/?>", Pattern.CASE_INSENSITIVE);
