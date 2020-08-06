@@ -478,7 +478,8 @@ cause it to fail.
         </replace>
     </target>
     
-    <target name="javadoc-stage-check" depends="javadoc-stage-replace" unless="javadoc.up.to.date">
+    <target name="javadoc-stage-check" depends="javadoc-stage-replace">
+        <!-- unless="javadoc.up.to.date" -->
         <taskdef name="checklinks" classname="org.netbeans.nbbuild.CheckLinks">
             <classpath>
                 <pathelement location="${nbantext.jar}"/>
