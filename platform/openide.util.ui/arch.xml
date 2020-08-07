@@ -126,7 +126,7 @@
   </p>
 
   <p>Support for SVG image loading can be enabled by including the optional
-     <a href="@org-openide-util-ui-svg@/overview-summary.html">SVG Loader</a> module.
+     <!-- Not apidoc yet<a href="@org-openide-util-ui-svg@/overview-summary.html">-->SVG Loader<!--</a>--> module.
   </p>
  </answer>
 
