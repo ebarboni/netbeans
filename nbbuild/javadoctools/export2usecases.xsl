@@ -119,7 +119,7 @@
         <xsl:param name="top" />
         
         <xsl:choose>
-            <xsl:when  test="contains(@href,'@TOP@')" >
+            <xsl:when test="contains(@href,'@TOP@')" >
                 <xsl:comment>URL contains @TOP@</xsl:comment>
                 <a>
                     <xsl:attribute name="href">
@@ -136,6 +136,12 @@
                     <xsl:attribute name="href">
                         <xsl:value-of select="$url" />
                     </xsl:attribute>
+                    <xsl:apply-templates />
+                </a>
+            </xsl:when>
+            <xsl:when test="starts-with($url, '#property')" >
+                <xsl:comment>Properties look at properties page</xsl:comment>
+                <a href="{$base}/properties.html/{$url}" >
                     <xsl:apply-templates />
                 </a>
             </xsl:when>
