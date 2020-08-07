@@ -43,7 +43,7 @@
  <answer id="arch-quality">
   <p>
    There is a lot of unit tests in 
-   <a href="@GITAPACHE@/master/openide.util/test/unit/src/">version control</a>
+   <a href="@GITURL@/master/openide.util/test/unit/src/">version control</a>
    system.
   </p>
  </answer>

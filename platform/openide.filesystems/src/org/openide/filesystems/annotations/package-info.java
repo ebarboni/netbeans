@@ -128,7 +128,7 @@ public class FrobnitzFactoryProcessor extends LayerGeneratingProcessor {
  *     confirming that it succeeds or aborts under the right conditions.
  *     For this, <code>AnnotationProcessorTestUtils</code> is useful.</li>
  * </ol>
- * <p><a href="@GITAPACHE@/master/platform/openide.util.lookup/test/unit/src/org/netbeans/modules/openide/util/ServiceProviderProcessorTest.java"><code>ServiceProviderProcessorTest</code></a>
+ * <p><a href="@GITURL@/master/platform/openide.util.lookup/test/unit/src/org/netbeans/modules/openide/util/ServiceProviderProcessorTest.java"><code>ServiceProviderProcessorTest</code></a>
  * demonstrates both styles.<p>
  */
 package org.openide.filesystems.annotations;
