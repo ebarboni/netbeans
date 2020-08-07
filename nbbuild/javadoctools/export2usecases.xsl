@@ -101,18 +101,17 @@
         <xsl:apply-templates select="./node()" />
     </xsl:template>
 
-<!--
     <xsl:template match="a[@href]">
         <xsl:variable name="target" select="ancestor::module/@target"/>
         <xsl:variable name="top" select="substring-before($target,'/')" />
         
-              <xsl:call-template name="print-url" >
-                <xsl:with-param name="url" select="@href" />
-                <xsl:with-param name="base" select="$target" />
-                <xsl:with-param name="top" select="$top" />
-              </xsl:call-template>
-        </xsl:template>
-    -->    
+        <xsl:call-template name="print-url" >
+            <xsl:with-param name="url" select="@href" />
+            <xsl:with-param name="base" select="$target" />
+            <xsl:with-param name="top" select="$top" />
+        </xsl:call-template>
+    </xsl:template>
+    
     <xsl:template name="print-url" >
         <xsl:param name="url" />
         <xsl:param name="base" />
@@ -139,7 +138,7 @@
                     <xsl:apply-templates />
                 </a>
             </xsl:when>
-            <xsl:when test="starts-with(@href, '#property')" >
+            <xsl:when test="starts-with(@href, '#property-')" >
                 <xsl:comment>Properties look at properties page</xsl:comment>
                 <a href="{$base}/properties.html/{$url}" >
                     <xsl:apply-templates />
