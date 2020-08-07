@@ -404,6 +404,7 @@ cause it to fail.
         <replace dir="${export.apichanges}" >        
             <include name="${javadoc.name}"/>
             <replacefilter token="@JDK@" value="${javadoc.docs.jdk}"/>
+            <replacefilter token="@GITAPACHE@" value="https://github.com/apache/netbeans/tree/"/>
             <replacefilter token="@FOOTER@" value="${javadoc.footer}"/>
             <replacefilter token="@TOP@/" value="@TOP@" />
             <replacefilter token="@TOP@" value="${javadoc.name}/" />
@@ -414,6 +415,7 @@ cause it to fail.
         <replace dir="${export.interfaces}" >
             <include name="${javadoc.name}"/>
             <replacefilter token="@JDK@" value="${javadoc.docs.jdk}"/>
+            <replacefilter token="@GITAPACHE@" value="https://github.com/apache/netbeans/tree/"/>
             <replacefilter token="@FOOTER@" value="${javadoc.footer}"/>
             <replacefilter token="@TOP@/" value="@TOP@" />
             <replacefilter token="@TOP@" value="${javadoc.name}/" />
@@ -425,6 +427,7 @@ cause it to fail.
         <replace dir="${javadoc.out.dir}">
             <include name="**/*.html"/>
             <replacefilter token="@JDK@" value="${javadoc.docs.jdk}"/>
+            <replacefilter token="@GITAPACHE@" value="https://github.com/apache/netbeans/tree/"/>
             &replaces;
             <replacefilter token="@FOOTER@" value="${javadoc.footer}"/>
         </replace>
