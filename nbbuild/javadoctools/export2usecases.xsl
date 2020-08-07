@@ -140,7 +140,7 @@
             </xsl:when>
             <xsl:when test="starts-with(@href, '#property-')" >
                 <xsl:comment>Properties look at properties page</xsl:comment>
-                <a href="{$base}/properties.html/{$url}" >
+                <a href="properties.html{$url}" >
                     <xsl:apply-templates />
                 </a>
             </xsl:when>
