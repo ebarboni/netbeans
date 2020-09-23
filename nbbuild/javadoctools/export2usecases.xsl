@@ -154,8 +154,8 @@
                 <xsl:comment>This must be a reference releative to the arch page, if not see nbbuild/javadoctools/export2usecases.xsl</xsl:comment>
                 <a>
                     <xsl:attribute name="href">
-                        <xsl:value-of select="$base" />
-                        <xsl:text>/../</xsl:text>
+                        <!--<xsl:value-of select="$base" />-->
+                        <xsl:text>./</xsl:text>
                         <xsl:value-of select="$url" />
                     </xsl:attribute>
                     <xsl:apply-templates />
