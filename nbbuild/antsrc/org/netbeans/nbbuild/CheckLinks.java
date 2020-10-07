@@ -120,7 +120,7 @@ public class CheckLinks extends MatchingTask {
             } catch (IOException ioe) {
                 throw new BuildException("Could not scan " + file + ": " + ioe, ioe, getLocation());
             }
-        }
+            }
         String testMessage = null;
         if (!errors.isEmpty()) {
             StringBuilder b = new StringBuilder("There were broken links");
@@ -129,10 +129,10 @@ public class CheckLinks extends MatchingTask {
             }
             testMessage = b.toString();
         }
-        JUnitReportWriter.writeReport(this, null, report, Collections.singletonMap("testBrokenLinks", testMessage));
+        JUnitReportWriter.writeReport(this, basedir.toString(), report, Collections.singletonMap("testBrokenLinks", testMessage));
     }
     
-    private static Pattern hrefOrAnchor = Pattern.compile("<(a|img|link)(\\s+shape=\"rect\")?(?:\\s+rel=\"stylesheet\")?\\s+(href|name|src)=\"([^\"#]*)(#[^\"]+)?\"(\\s+shape=\"rect\")?(?:\\s+type=\"text/css\")?\\s*/?>", Pattern.CASE_INSENSITIVE);
+    private static Pattern hrefOrAnchor = Pattern.compile("<(a|img|link|h3)(\\s+shape=\"rect\")?(?:\\s+rel=\"stylesheet\")?\\s+(href|name|src|id)=\"([^\"#]*)(#[^\"]+)?\"(\\s+shape=\"rect\")?(?:\\s+type=\"text/css\")?\\s*/?>", Pattern.CASE_INSENSITIVE);
     private static Pattern lineBreak = Pattern.compile("^", Pattern.MULTILINE);
     
     /**
@@ -459,7 +459,7 @@ public class CheckLinks extends MatchingTask {
             while (m.find()) {
                 // Get the stuff involved:
                 String type = m.group(3);
-                if (type.equalsIgnoreCase("name")) {
+                if (type.equalsIgnoreCase("name") ||type.equalsIgnoreCase("id")) {
                     // We have an anchor, therefore refs to it are valid.
                     String name = unescape(m.group(4));
                     if (names.add(name)) {
