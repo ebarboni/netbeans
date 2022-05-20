@@ -22,4 +22,5 @@
 <project name="main" basedir="nbbuild" default="build-nozip">
     <description>NetBeans master build script.</description>
     <import file="nbbuild/build.xml"/>
+    <!-- test -->
 </project>
