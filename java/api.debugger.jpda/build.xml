@@ -26,30 +26,30 @@
         <mkdir dir="${jpda.classes.dir}"/>
         <copy todir="${jpda.classes.dir}">
             <resources>
-                <javaresource name="com/sun/jdi/AbsentInformationException.class"/>
-                <javaresource name="com/sun/jdi/Bootstrap.class"/>
-                <javaresource name="com/sun/jdi/StackFrame.class"/>
-                <javaresource name="com/sun/jdi/ObjectReference.class"/>
-                <javaresource name="com/sun/jdi/ThreadReference.class"/>
-                <javaresource name="com/sun/jdi/ReferenceType.class"/>
-                <javaresource name="com/sun/jdi/ClassType.class"/>
-                <javaresource name="com/sun/jdi/Value.class"/>
-                <javaresource name="com/sun/jdi/Locatable.class"/>
-                <javaresource name="com/sun/jdi/Mirror.class"/>
-                <javaresource name="com/sun/jdi/VirtualMachine.class"/>
-                <javaresource name="com/sun/jdi/VirtualMachineManager.class"/>
-                <javaresource name="com/sun/jdi/connect/AttachingConnector.class"/>
-                <javaresource name="com/sun/jdi/connect/Connector.class"/>
-                <javaresource name="com/sun/jdi/connect/Connector$Argument.class"/>
-                <javaresource name="com/sun/jdi/connect/Connector$IntegerArgument.class"/>
-                <javaresource name="com/sun/jdi/connect/IllegalConnectorArgumentsException.class"/>
-                <javaresource name="com/sun/jdi/connect/LaunchingConnector.class"/>
-                <javaresource name="com/sun/jdi/connect/ListeningConnector.class"/>
-                <javaresource name="com/sun/jdi/connect/Transport.class"/>
-                <javaresource name="com/sun/jdi/connect/VMStartException.class"/>
-                <javaresource name="com/sun/jdi/request/EventRequest.class"/>
-                <javaresource name="com/sun/jdi/request/StepRequest.class"/>
-                <javaresource name="com/sun/jdi/event/Event.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/AbsentInformationException.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/Bootstrap.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/StackFrame.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/ObjectReference.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/ThreadReference.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/ReferenceType.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/ClassType.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/Value.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/Locatable.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/Mirror.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/VirtualMachine.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/VirtualMachineManager.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/AttachingConnector.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/Connector.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/Connector$Argument.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/Connector$IntegerArgument.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/IllegalConnectorArgumentsException.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/LaunchingConnector.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/ListeningConnector.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/Transport.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/connect/VMStartException.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/request/EventRequest.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/request/StepRequest.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/event/Event.class"/>
             </resources>
         </copy>
     </target>

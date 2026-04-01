@@ -26,9 +26,9 @@
         <mkdir dir="${jpda.classes.dir}"/>
         <copy todir="${jpda.classes.dir}">
             <resources>
-                <javaresource name="com/sun/jdi/StackFrame.class"/>
-                <javaresource name="com/sun/jdi/ObjectReference.class"/>
-                <javaresource name="com/sun/jdi/Value.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/StackFrame.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/ObjectReference.class"/>
+                <javaresource classpath="${cp.extra}" name="com/sun/jdi/Value.class"/>
             </resources>
         </copy>
     </target>
